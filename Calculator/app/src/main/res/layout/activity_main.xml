@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/expression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:cursorVisible="false"
+            android:clickable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="end"
+            android:inputType="text"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:cursorVisible="false"
+            android:clickable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="end"
+            android:inputType="textPersonName"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="=0"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/btn"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="C" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/seven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="7" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/zero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/backspace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/btn2"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text=">" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/eight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="5" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Doublezero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="00" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/btn2"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="%" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="9" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="6" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/btn2"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="." />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/divide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/btn2"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="/" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/multiply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/btn2"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="*" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/btn2"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="+" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/subtract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/btn2"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="-" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/equal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/btn2"
+                android:background="@color/bg"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="=" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+<!--Explanation of layout Code-->
+<!--    let's break down the XML code line by line:-->
+
+<!--    xml-->
+<!--    Copy code-->
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--    This line declares the XML version and encoding used in the document.-->
+<!--    xml-->
+<!--    Copy code-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--tools:context=".MainActivity">-->
+<!--This is the root element of the layout file, which is a ConstraintLayout. It provides flexible layout options for designing UIs in Android.-->
+<!--The xmlns:android, xmlns:app, and xmlns:tools attributes define XML namespaces used in the layout file for Android attributes, app-specific attributes, and tools respectively.-->
+<!--android:layout_width and android:layout_height specify that the layout should match the width and height of its parent, which is often the entire screen in this case.-->
+<!--tools:context is used by the Android Studio layout editor to provide context for rendering the layout during design time.-->
+<!--xml-->
+<!--Copy code-->
+<!--<LinearLayout-->
+<!--    android:id="@+id/linearLayout2"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_marginBottom="5dp"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:orientation="vertical"-->
+<!--    app:layout_constraintBottom_toTopOf="@+id/view"-->
+<!--    tools:layout_editor_absoluteX="0dp">-->
+<!--    This LinearLayout contains UI elements like EditText and buttons. It has a vertical orientation, meaning its children will be stacked vertically.-->
+<!--    android:id assigns a unique identifier to this layout.-->
+<!--    android:layout_width and android:layout_height specify the dimensions of the layout.-->
+<!--    app:layout_constraintBottom_toTopOf positions this layout above another UI element with the ID view using ConstraintLayout's constraint system.-->
+<!--    tools:layout_editor_absoluteX is a tool-specific attribute used by Android Studio for rendering purposes during design time.-->
+<!--    xml-->
+<!--    Copy code-->
+<!--    <EditText-->
+<!--        android:id="@+id/expression"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--    ...-->
+<!--    />-->
+<!--    This EditText is used for displaying an expression. Users can input expressions here.-->
+<!--    android:id assigns a unique identifier to this EditText.-->
+<!--    android:layout_width and android:layout_height specify the dimensions of the EditText.-->
+<!--    xml-->
+<!--    Copy code-->
+<!--    <EditText-->
+<!--        android:id="@+id/result"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--    ...-->
+<!--    />-->
+<!--    Similar to the previous EditText, this one is used for displaying the result of the expression.-->
+<!--    android:id assigns a unique identifier to this EditText.-->
+<!--    android:layout_width and android:layout_height specify the dimensions of the EditText.-->
+<!--    xml-->
+<!--    Copy code-->
+<!--    <View-->
+<!--        android:id="@+id/view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--    ...-->
+<!--    />-->
+<!--    This View is a horizontal line used as a separator between the expression/result EditTexts and the buttons.-->
+<!--    android:id assigns a unique identifier to this View.-->
+<!--    android:layout_width and android:layout_height specify the dimensions of the View.-->
+<!--    xml-->
+<!--    Copy code-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--    ...-->
+<!--    />-->
+<!--    This LinearLayout contains buttons for inputting numbers and operations.-->
+<!--    android:id assigns a unique identifier to this layout.-->
+<!--    android:layout_width and android:layout_height specify the dimensions of the layout.-->
+<!--    Inside this LinearLayout, there are four child LinearLayouts, each containing buttons for specific numbers or operations. These buttons have unique IDs, styles, and functionalities.-->
+
+<!--    Overall, this XML layout defines a simple calculator UI with EditTexts for displaying expressions and results, a separator line, and buttons for user input. It uses a ConstraintLayout as the root layout for flexible positioning and a LinearLayout for organizing the buttons.-->
+
+<!--    User-->
+<!--    explain the remaining part too-->
+<!--    ChatGPT-->
+<!--    Certainly, let's continue explaining the remaining part of the XML layout:-->
+
+<!--    xml-->
+<!--    Copy code-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:orientation="vertical">-->
+<!--        This LinearLayout is one of the child layouts within the main LinearLayout. It's used for organizing buttons vertically.-->
+<!--        android:layout_width and android:layout_height are set to wrap_content, meaning the layout will adjust its size based on its content.-->
+<!--        android:layout_weight="1" specifies that this layout should take up an equal portion of the available space along the horizontal axis. In this case, it's inside a horizontal LinearLayout, so all child layouts with layout_weight="1" will have equal width.-->
+<!--        Within this LinearLayout, there are several buttons defined with similar attributes:-->
+
+<!--        xml-->
+<!--        Copy code-->
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/clear"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/btn"-->
+<!--            android:background="@color/bg"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="20sp"-->
+<!--            android:text="C" />-->
+<!--        This is a button (specifically, an instance of AppCompatButton) for clearing the current input or calculation.-->
+<!--        android:id assigns a unique identifier to this button.-->
+<!--        android:layout_width and android:layout_height specify the dimensions of the button.-->
+<!--        android:gravity="center" centers the text inside the button.-->
+<!--        android:textColor sets the text color.-->
+<!--        android:background sets the background color of the button.-->
+<!--        android:layout_marginBottom="20dp" adds a margin of 20dp at the bottom of the button.-->
+<!--        android:textStyle="bold" makes the text bold.-->
+<!--        android:textSize="20sp" sets the text size to 20sp (scaled pixels).-->
+<!--        android:text="C" sets the text displayed on the button to "C".-->
+<!--        Similar buttons follow the same pattern with different IDs, text, and styling attributes.-->
+
+<!--        The other LinearLayouts and buttons within them follow the same structure and serve different functionalities, such as inputting numbers, performing arithmetic operations, and handling special functions like backspace and percentage calculation.-->
+
+<!--        Overall, this layout defines a user interface for a basic calculator app with various buttons for inputting numbers and performing calculations. The layout utilizes nested LinearLayouts to organize the buttons in a grid-like fashion, allowing for easy user interaction.-->
+
+<!--        User-->
+<!--        why did appcompatButton instead of simple Button-->
+<!--        ChatGPT-->
+<!--        The choice between AppCompatButton and Button depends on the specific requirements and features you need in your app. Here's why AppCompatButton might be chosen over Button:-->
+
+<!--        Backward Compatibility: AppCompatButton is part of the AppCompat library, which provides backward compatibility for newer features on older versions of Android. It ensures consistent behavior and appearance across different Android versions. If your app needs to support older versions of Android, using AppCompatButton can be advantageous.-->
+
+<!--        Material Design: AppCompatButton supports Material Design, which provides guidelines and components for creating modern and visually appealing UIs. It ensures that your buttons look consistent with other Material Design elements in your app.-->
+
+<!--        Theming and Styling: AppCompatButton allows you to easily apply themes and styles defined in your app's theme files or styles.xml. This makes it simpler to customize the appearance of buttons throughout your app consistently.-->
+
+<!--        Additional Features: AppCompatButton might offer additional features or compatibility enhancements compared to the standard Button. These features could include support for tinting, vector drawables, and other Material Design attributes.-->
+
+<!--        However, if you have specific requirements and you don't need the features provided by AppCompatButton, you can still use the standard Button element. It's simpler and more lightweight, which might be preferable in some cases, especially if you're targeting newer Android versions exclusively and don't need the backward compatibility provided by AppCompat.-->
+
+
+
+
+<!---->
